@@ -1,0 +1,20 @@
+
+Design Layout for "View Cameras" (Concept)
+
+
+
+|  Header:                                             |
+|  [Application Name]                    [User: (current user)]  |
+---------------------------------------------------------
+|  Sidebar (Camera List)   |     Main Content         |
+|                           |                         |
+|  Cameras  (examples)      |  [ Selected Camera Name ] 
+|  ----------------------   |  -----------------------|
+|  ● Front Door   [Online]  |  [   LIVE VIDEO FEED   ]|
+|  ● Backyard     [Online]  |  [  (stream player)    ]|
+|  ○ Garage       [Offline] |  -----------------------|
+|  ○ Living Room  [Offline] |                         |
+|                          |  Status Bar (examples): |
+|                          |  LIVE • 720p • 15 fps   |
+|                          |  [Mute] [Fullscreen]    |
+
