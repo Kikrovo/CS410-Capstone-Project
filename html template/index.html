@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camera View</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="app-name">Camera Demo</div>
+            <!-- This should reflect AuthManager.current_user() -->
+            <div class="user-info">User: homeowner@gmail.com (role: homeowner)</div>
+        </div>
+    </header>
+
+    <!-- Main layout -->
+    <div class="layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Camera</h2>
+            <div class="camera-item">
+                <!-- Match camera_id from auth.py: "backyard" -->
+                <span class="camera-name">camera 1</span>
+                <span class="camera-status status-online">Online/Offline</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="camera-header">
+                <!-- Show camera id in title -->
+                <div class="camera-title">Camera Live View</div>
+                <span class="live-pill">LIVE</span>
+            </div>
+
+            <div class="video-feed">
+            LIVE VIDEO FEED PLACEHOLDER (camera1)
+            </div>
+
+            <div class="status-bar">
+                <div class="status-text">
+                    <span class="status-dot"></span>
+                    <span>Live stream active (authorized by AuthManager)</span>
+                </div>
+                <div class="controls">
+                    <button class="btn">Mute</button>
+                    <button class="btn">Fullscreen</button>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</div>
+</body>
+</html>
