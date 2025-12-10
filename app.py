@@ -12,7 +12,7 @@ auth_manager = AuthManager()
 
 
 CAMERA_ENDPOINTS = {
-    "main_cam": "http://192.168.4.1",
+    "main_cam": "http://192.168.4.1/sustain?stream=0",
 
 }
 
@@ -59,8 +59,8 @@ def login():
             error = "Invalid email or password"
         else:
             session["user_email"] = email
-            next_url = request.args.get("next") or url_for("index")
-            return redirect(next_url)
+            # 👇 direct to camera route that we know exists
+            return redirect(url_for("index"))
     return render_template("login.html", error=error, user=None)
 
 
@@ -68,7 +68,8 @@ def login():
 @login_required
 def index():
     user = get_current_user()
-    return render_template("index.html", user=user)
+    camera_url = CAMERA_ENDPOINTS["main_cam"]
+    return render_template("index.html", user=user, camera_url=camera_url)
 
 
 @app.route("/camera/<camera_id>")
@@ -86,6 +87,13 @@ def camera_view(camera_id):
         camera_id=camera_id,
         camera_url=base_url,
     )
+
+
+@app.route("/logout")
+def logout():
+    session.pop("user_email", None)
+    return redirect(url_for("login"))
+
 
 if __name__ == "__main__":
     # For development & demo
