@@ -1,0 +1,64 @@
+/* LOGIN PAGE STYLES */
+
+.login-page {
+  max-width: 420px;
+  margin: 72px auto;
+  background: #fff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+.login-page h1 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.login-page p {
+  margin: 0 0 18px;
+  color: #6b7280;
+}
+
+.form-row {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.login-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.error {
+  color: #b91c1c;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.small-muted {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.link-like {
+  background: none;
+  border: none;
+  color: #111827;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.95rem;
+}
